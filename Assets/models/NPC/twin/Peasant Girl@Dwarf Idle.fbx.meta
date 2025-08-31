@@ -542,18 +542,18 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: character(Clone)
+    - name: PeasentGirl(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Peasant_girl
-      parentName: character(Clone)
+      parentName: PeasentGirl(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Hips
-      parentName: character(Clone)
+      parentName: PeasentGirl(Clone)
       position: {x: -0.00000006192467, y: 1.1303213, z: 0.00094110693}
       rotation: {x: 5.070907e-14, y: 0.00000006180133, z: -0.0000008205174, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -909,7 +909,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: af4fdfb45e6ad7b4bac10da206af6181, type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 0d6323b22b3b1a04b9dc732bcd52b627, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
