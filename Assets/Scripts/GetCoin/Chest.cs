@@ -6,8 +6,6 @@ public class Chest : MonoBehaviour
     private Animator animator;
     private bool isOpened = false;
 
-    public GoldInventory goldInventory;
-
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -15,13 +13,14 @@ public class Chest : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !isOpened)
+        if (!isOpened)
         {
-            animator.SetBool("Open", true);
-            isOpened = true;
+            GoldInventory goldInventory = other.GetComponent<GoldInventory>();
 
             if (goldInventory != null)
             {
+                animator.SetBool("Open", true);
+                isOpened = true;
                 goldInventory.AddCoins();
             }
         }
