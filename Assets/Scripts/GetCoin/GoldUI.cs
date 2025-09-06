@@ -4,7 +4,7 @@ using System.Collections;
 using TMPro;
 using System;
 
-public class DoldUI : MonoBehaviour
+public class GoldUI : MonoBehaviour
 {
     private TextMeshProUGUI GoldText;
 
@@ -16,6 +16,5 @@ public class DoldUI : MonoBehaviour
     public void UpdateGoldText(GoldInventory goldInventory)
     {
         GoldText.text = goldInventory.NumberOfCoins.ToString();
-        
     }
 }
