@@ -9,7 +9,7 @@ public class GoldInventory : MonoBehaviour
     public UnityEvent<GoldInventory> OnCoinCollected;
     public void CoinsCollected()
     {
-        NumberOfCoins += 15;
+        NumberOfCoins += 10;
         OnCoinCollected.Invoke(this);
     }
     
