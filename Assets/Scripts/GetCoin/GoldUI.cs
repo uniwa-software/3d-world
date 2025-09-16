@@ -4,17 +4,41 @@ using System.Collections;
 using TMPro;
 using System;
 
+
 public class GoldUI : MonoBehaviour
 {
-    private TextMeshProUGUI GoldText;
+    private TextMeshProUGUI goldText;
 
-    void Start()
+    private void Awake()
     {
-        GoldText = GetComponent<TextMeshProUGUI>();
+        goldText = GetComponent<TextMeshProUGUI>();
     }
 
-    public void UpdateGoldText(GoldInventory goldInventory)
+    private void Start()
     {
-        GoldText.text = goldInventory.NumberOfCoins.ToString();
+        // Ensure CurrencyManager exists
+        if (CurrencyManager.Instance != null)
+        {
+            // Subscribe to the gold changed event
+            CurrencyManager.Instance.OnGoldChanged.AddListener(UpdateGoldText);
+            
+            // Update immediately so UI shows current gold
+            UpdateGoldText(CurrencyManager.Instance.GetGold());
+        }
+        else
+        {
+            Debug.LogWarning("CurrencyManager instance not found!");
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (CurrencyManager.Instance != null)
+            CurrencyManager.Instance.OnGoldChanged.RemoveListener(UpdateGoldText);
+    }
+
+    private void UpdateGoldText(int currentGold)
+    {
+        goldText.text = currentGold.ToString();
     }
 }
