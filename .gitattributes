@@ -5,3 +5,4 @@ KingdomsValor/* filter=lfs diff=lfs merge=lfs -text
 KingdomsValor/3d[[:space:]]world.exe filter=lfs diff=lfs merge=lfs -text
 KingdomsValor/3d_world.exe filter=lfs diff=lfs merge=lfs -text
 KingdomsValor/UnityCrashHandler64.exe filter=lfs diff=lfs merge=lfs -text
+KingdomsValor.zip filter=lfs diff=lfs merge=lfs -text
